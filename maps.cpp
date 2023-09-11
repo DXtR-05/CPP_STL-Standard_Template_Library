@@ -11,8 +11,9 @@
 //            class Alloc = allocator<pair<const Key,T> >    // map::allocator_type  
 //            > class map;  
 
-#include<iostream>
-#include<map>
+#include<bits/stdc++.h>
+// #include<map>
+// #include <unordered_map>
 using namespace std;
 
 void print(map<int,string>&m){
@@ -61,19 +62,61 @@ int main(){
     // print(m);
 
     // Question->
-    // 1.Given N strings,Print unique strings in lexiograaphical order with their _Query_perf_frequency
+    // 1.Given N strings,Print unique strings in lexiographical order with their _Query_perf_frequency
     // N <= 10^5
     // |S| <= 100
-    map<string,int>m;
-    int n;
-    cin>>n;
-    for(int i = 0;i<n;i++){
-        string s;
-        cin>>s;
-        // m[s] = m[s]+1;
-        m[s]++;
-    }
-    for(auto &pr :m){
-        cout<<pr.first<<" "<<pr.second<<endl;
-    }
+    // map<string,int>m;
+    // int n;
+    // cin>>n;
+    // for(int i = 0;i<n;i++){
+    //     string s;
+    //     cin>>s;
+    //     // m[s] = m[s]+1;
+    //     m[s]++;
+    // }
+    // for(auto &pr :m){
+    //     cout<<pr.first<<" "<<pr.second<<endl;
+    // }
+
+
+    //UNORDERED_MAP IN C++ STL
+
+    // Internally unordered_map is implemented using Hash Table, the key provided to map is hashed into indices of a hash table which is why the performance of data structure depends on the hash function a lot but on average, the cost of search, insert, and delete from the hash table is O(1). 
+    
+    // Declaring umap to be of 
+  // <string, int> type key 
+  // will be of STRING type 
+  // and mapped VALUE will
+  // be of int type
+//   unordered_map<string, int> umap;
+  
+//   // inserting values by using [] operator
+//   umap["Akash"] = 10;
+//   umap["Kumar"] = 20;
+//   umap["Laha"] = 30;
+  
+//   // Traversing an unordered map
+//   for (auto x : umap)
+//     cout << x.first << " " << 
+//             x.second << endl;
+
+// Given N strings & Q queries.
+// in each query you are given a string print the frequency of that string. 
+
+    // unordered_map<string,int>m;
+    // int n;
+    // cin>>n;
+    // for(int i = 0;i<n;i++){
+    //     string s;
+    //     cin>>s;
+    //     // m[s] = m[s]+1;
+    //     m[s]++;
+    // }
+    // int q;
+    // cin>>q;
+    // while(q--){
+    //     string s;
+    //     cin>>s;
+    //     cout<<m[s]<<endl;
+    // }
 }
